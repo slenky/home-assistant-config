@@ -2,7 +2,7 @@
 path: security
 title: Alarm
 icon: mdi:shield-home
-cards:
-  - type: alarm-panel
-    entity: alarm_control_panel.home_alarm
-    title: Alarm System
+cards: []
+  # - type: alarm-panel
+  #   entity: alarm_control_panel.home_alarm
+  #   title: Alarm System
