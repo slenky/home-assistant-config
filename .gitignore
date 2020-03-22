@@ -6,6 +6,7 @@
 *.pyc
 ._*
 __pycache__
+google_serviceaccount.json
 
 # Directory (contents) ignores
 config/.cloud
