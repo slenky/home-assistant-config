@@ -1,3 +1,1 @@
-mqtt:
-  broker: core-mosquitto
-  discovery: true
+mqtt: ~
