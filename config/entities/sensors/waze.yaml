@@ -1,16 +1,16 @@
 platform: template
-  sensors:
-    dest_address:
-      value_template: >-
-        {%- if is_state("input_select.road_destination", "Home")  -%}
-          !secret home_address
-        {%- elif is_state("input_select.road_destination", "Worknest")  -%}
-          !secret worknest_address
-        {%- elif is_state("input_select.road_destination", "Mimacom")  -%}
-          !secret mimacom_address
-        {%- else -%}
-          Unknown
-        {%- endif %}
+sensors:
+  dest_address:
+    value_template: >-
+      {%- if is_state("input_select.road_destination", "Home")  -%}
+        !secret home_address
+      {%- elif is_state("input_select.road_destination", "Worknest")  -%}
+        !secret worknest_address
+      {%- elif is_state("input_select.road_destination", "Mimacom")  -%}
+        !secret mimacom_address
+      {%- else -%}
+        Unknown
+      {%- endif %}
 ---
 platform: waze_travel_time
 name: "Me to destination"
