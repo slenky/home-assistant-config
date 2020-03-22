@@ -1,0 +1,26 @@
+platform: template
+  sensors:
+    dest_address:
+      value_template: >-
+        {%- if is_state("input_select.road_destination", "Home")  -%}
+          !secret home_address
+        {%- elif is_state("input_select.road_destination", "Worknest")  -%}
+          !secret worknest_address
+        {%- elif is_state("input_select.road_destination", "Mimacom")  -%}
+          !secret mimacom_address
+        {%- else -%}
+          Unknown
+        {%- endif %}
+---
+platform: waze_travel_time
+name: "Me to destination"
+origin: device_tracker.bohdan
+destination: sensor.dest_address
+region: 'EU'
+---
+platform: waze_travel_time
+origin: !secret worknest_address
+name: "from Worknest to Mimacom"
+destination: !secret work2_address
+region: 'EU'
+units: metric
