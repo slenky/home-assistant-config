@@ -1,6 +1,6 @@
 platform: waze_travel_time
 origin: !secret worknest_address
-name: "from Worknest to Mimacom"
+name: "From Worknest to Mimacom"
 destination: !secret mimacom_address
 region: 'EU'
 units: metric

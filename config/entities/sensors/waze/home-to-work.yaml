@@ -1,5 +1,5 @@
 platform: waze_travel_time
-name: "Me to destination"
-origin: device_tracker.bohdan
-destination: sensor.dest_address
+name: "To Worknest"
+origin: !secret home_address
+destination: !secret worknest_address
 region: 'EU'

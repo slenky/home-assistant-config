@@ -1,0 +1,6 @@
+platform: waze_travel_time
+origin: !secret mimacom_address
+name: "From Work to Home"
+destination: !secret home_address
+region: 'EU'
+units: metric
