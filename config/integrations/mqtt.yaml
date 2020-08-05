@@ -1,0 +1,4 @@
+mqtt:
+  broker: core-mosquitto
+  username: mqtt
+  password: mqttpass321
