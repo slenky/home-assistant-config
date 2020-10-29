@@ -1,0 +1,17 @@
+---
+description: Turn lights on/off using wireless Dimemr
+alias: kitchen_led_onoff
+id: 158fc336-81b5-4ba1-b060-fee6192d9c7d
+trigger:
+  - platform: state
+    entity_id: sensor.kitchen_dimmer_click
+    to: 'single'
+action:
+  - service: script.turn_on
+    data_template:
+      entity_id: >-
+        {%- if states('light.0x00124b00213aee2c_light') == 'off' -%}
+        script.kitchen_led_on
+        {%- else -%}
+        script.kitchen_led_off
+        {%- endif -%} 

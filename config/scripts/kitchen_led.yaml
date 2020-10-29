@@ -1,0 +1,13 @@
+kitchen_led_on:
+  alias: Включение лампы LED
+  sequence:
+    - service: light.turn_on
+      entity_id: light.0x00124b00213aee2c_light
+      data_template:
+        brightness_pct: 99
+
+kitchen_led_off:
+  alias: Выключение LED 
+  sequence:
+    - service: light.turn_off
+      entity_id: light.0x00124b00213aee2c_light

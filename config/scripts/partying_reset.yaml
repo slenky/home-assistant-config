@@ -1,0 +1,9 @@
+lights_partying_reset:
+  alias: Lights partying reset
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id:
+          - light.mqtt_json_light
+          - light.mqtt_json_light_2
+        profile: relax

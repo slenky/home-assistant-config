@@ -1,0 +1,7 @@
+lights_partying_off:
+  alias: Lights partying off
+  sequence:
+    - service: light.turn_off
+      entity_id: 
+        - light.mqtt_json_light
+        - light.mqtt_json_light_2

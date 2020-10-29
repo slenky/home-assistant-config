@@ -1,0 +1,9 @@
+alias: 'Lights partying'
+id: 'Lights partying'
+#    initial_state: 'on'
+trigger:
+  platform: time_pattern
+  seconds: '/4'   # '{{ "/" ~ ((range(2, 5) | random) | int) }}'
+condition:
+action: 
+  service: script.lights_partying_on

@@ -1,9 +1,9 @@
 ---
 platform: "mqtt"
-state_topic: "zigbee2mqtt/0x00124b002114bff5"
+state_topic: "zigbee2mqtt/0x00124b00213af281"
 availability_topic: "zigbee2mqtt/bridge/state"
 brightness: true
 color_temp: true
 xy: true
 schema: "json"
-command_topic: "zigbee2mqtt/0x00124b002114bff5/set"
+command_topic: "zigbee2mqtt/0x00124b00213af281/set"

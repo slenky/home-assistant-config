@@ -1,0 +1,9 @@
+alias: 'Lights Party Mode'
+id: 'Lights Party Mode'
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: input_boolean.home_mode_party
+action:
+  service_template: >
+    script.lights_mode_party_{{ states('input_boolean.home_mode_party') }}

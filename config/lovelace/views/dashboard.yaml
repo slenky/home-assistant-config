@@ -10,3 +10,13 @@ cards:
       - entity: sensor.bridge_state
     show_header_toggle: false
     title: Zigbee
+  - type: button
+    tap_action:
+      action: more-info
+    hold_action:
+      action: toggle
+    show_icon: true
+    show_name: true
+    show_state: false
+    entity: light.mqtt_json_light_2
+    name: LED

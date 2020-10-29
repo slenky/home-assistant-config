@@ -1,0 +1,24 @@
+---
+description: Change brightness of LED in the kitchen
+alias: kitchen_led_brightness
+id: 158fc336-81b5-4ba1-b060-hbfdfgk24K
+initial_state: true
+trigger:
+  - platform: state
+    entity_id: sensor.kitchen_dimmer_number
+condition:
+  - condition: state
+    entity_id: light.0x00124b00213aee2c_light
+    state: 'on'
+action:
+  - service: light.turn_on
+    entity_id: light.0x00124b00213aee2c_light
+    data_template:
+      brightness_step_pct: >
+        {% set plus = (states('sensor.kitchen_dimmer_number') | int) %}
+        {% set minus = (states('sensor.kitchen_dimmer_number') | int) * -1 %}
+        {% if states('sensor.kitchen_dimmer_direction') == 'clockwise' %}
+        {{plus}}
+        {% else %}
+        {{minus}}
+        {% endif %}

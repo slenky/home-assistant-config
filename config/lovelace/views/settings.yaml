@@ -1,7 +1,7 @@
 ---
 path: settings
 title: Settings
-icon: mdi:settings
+icon: mdi:cog
 cards: []
   # - type: entities
   #   title: Times

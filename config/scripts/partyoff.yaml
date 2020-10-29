@@ -1,0 +1,9 @@
+lights_mode_party_off:
+  alias: Party off
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: automation.lights_partying
+    - delay: 00:00:02
+    - service: script.lights_partying_reset
+    - delay: 00:00:01
+    - service: script.lights_partying_off
